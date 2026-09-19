@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: #1c1c1c;
+  color: #fffaf0;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.back-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+  color: #fffaf0;
+  text-decoration: underline;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+}
+
+.controls {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  margin: 0;
+  text-align: right;
+  line-height: 1.6;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+}
+
+.stage {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.triangle {
+  width: 15vmin;
+  height: calc(15vmin * 0.8660254);
+  background-color: #8a9b4e;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  transform-origin: 50% 66.666%;
+  will-change: transform;
+}
